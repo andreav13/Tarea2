@@ -70,7 +70,7 @@ void Cuerpo::Mueva_V(double dt, double Constante){
   V+=F*(Constante*dt)/m;
 }
 
-
+//Funciones de la clase Colisionador
 void Colisionador::CalculeTodasLasFuerzas(Cuerpo* Planeta){
   int i,j;
   for(i=0;i<N;i++){
@@ -114,8 +114,10 @@ int main(void){
   Planeta[1].Inicie(x1, 0, 0, 0, Vy1, 0, m1, R1);
 
   for (t=0;t<tmax;t+=dt){
+    
+    cout<<Planeta[0].Getx()<<" "<<Planeta[0].Gety()<<" "<<Planeta[1].Getx()<<" "<<Planeta[1].Gety()<<endl;
   
-  //Muevase con Omelyan FR.
+    //Muevase con Omelyan FR.
     for(i=0;i<N;i++){
       Planeta[i].Mueva_r(dt, Zeta);
     }
@@ -154,7 +156,6 @@ int main(void){
       Planeta[i].Mueva_r(dt, Zeta);
     }
 
-    cout<<Planeta[0].Getx()<<" "<<Planeta[0].Gety()<<" "<<Planeta[1].Getx()<<" "<<Planeta[1].Gety()<<endl;
     
   }
   
