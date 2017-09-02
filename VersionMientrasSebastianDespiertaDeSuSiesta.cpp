@@ -1,6 +1,6 @@
 #include <iostream>
-#include <fstream> //save to file
-#include <cmath> //math functions
+#include <fstream> 
+#include <cmath> 
 #include "Vector.h"
 
 using namespace std;
@@ -29,7 +29,6 @@ public:
   void Mueva_V(double dt, double Constante);
   double Getx(void){return r.x();};
   double Gety(void){return r.y();};
-  void Dibujese(void);
 
   friend class Colisionador;
 };
@@ -72,11 +71,6 @@ void Cuerpo::Mueva_V(double dt, double Constante){
 }
 
 
-void Cuerpo::Dibujese(void){
-  cout<<", "<<r.x()<<"+"<<R<<"*cos(t),"<<r.y()<<"+"<<R<<"*sin(t)";
-}
-
-
 void Colisionador::CalculeTodasLasFuerzas(Cuerpo* Planeta){
   int i,j;
   for(i=0;i<N;i++){
@@ -99,58 +93,27 @@ void Colisionador::CalculeLaFuerzaEntre(Cuerpo & Planeta1, Cuerpo & Planeta2){
 }
 
 
-void InicieAnimacion(void){
-  cout<<"set terminal gif animate"<<endl;
-  cout<<"set output 'DosPlanetasVector.gif'"<<endl;
-  cout<<"unset key"<<endl;
-  cout<<"set xrange [-1200:1200]"<<endl;
-  cout<<"set yrange [-1200:1200]"<<endl;
-  cout<<"set size ratio -1"<<endl;
-  cout<<"set parametric"<<endl;
-  cout<<"set trange [0:7]"<<endl;
-  cout<<"set isosamples 12"<<endl;
-}
-
-void InicieCuadro(void){
-  cout<<"plot 0,0 ";
-}
-void TermineCuadro(void){
-  cout<<endl;
-}
-
-
 
 int main(void){
   
   int i;
   double t, dt=50;
-  int Ndibujos,tdibujo;
   Cuerpo Planeta[N];
   Colisionador Newton;
 
-  double m0=10, m1=1, r=1000, R0=30, R1=15;
+  double m0=1047, m1=1, r=1000, R0=60, R1=10;
   double M=m0+m1;
   double x0=-m1*r/M, x1=x0+r;
 
   double omega, Vy0, Vy1, T, tmax;
-  omega=sqrt(G*M*pow(r,-3)); Vy0=omega*x0; Vy1=omega*x1; T=2*M_PI/omega; tmax=1.1*T;
+  omega=sqrt(G*M*pow(r,-3)); Vy0=omega*x0; Vy1=omega*x1; T=2*M_PI/omega; tmax=20*T;
 
-  InicieAnimacion();
-  Ndibujos=500;
     
   //            (x0, y0, z0, Vx0, Vy0, Vz0, m0, R0)
   Planeta[0].Inicie(x0, 0, 0, 0, Vy0, 0, m0, R0);
   Planeta[1].Inicie(x1, 0, 0, 0, Vy1, 0, m1, R1);
 
-  for (t=tdibujo=0;t<tmax;t+=dt,tdibujo+=dt){
-    
-    if (tdibujo>tmax/Ndibujos){
-      InicieCuadro();
-      for(i=0;i<N;i++){Planeta[i].Dibujese();}
-      TermineCuadro();
-      tdibujo=0;
-    }
-    
+  for (t=0;t<tmax;t+=dt){
   
   //Muevase con Omelyan FR.
     for(i=0;i<N;i++){
@@ -190,6 +153,8 @@ int main(void){
     for(i=0;i<N;i++){
       Planeta[i].Mueva_r(dt, Zeta);
     }
+
+    cout<<Planeta[0].Getx()<<" "<<Planeta[0].Gety()<<" "<<Planeta[1].Getx()<<" "<<Planeta[1].Gety()<<endl;
     
   }
   
