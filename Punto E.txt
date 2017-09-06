@@ -1,0 +1,80 @@
+Punto e)
+
+El punto se resolvera en tres partes, en primer lugar se calcularán los valores teóricos de los periodos T1 y T2
+reemplazando los parametros correspondientes, luego se procedera a realizar un calculo aproximado de T1 y T2 analizando
+la gráfica obtenida de la simulación luego de perturbar ligeramente la posición inicial del planeta troyano, finalmente
+analizarán los porcentajes de error entre los valores teóricos y los "experimentales" determinando así la precisión de
+la simulación.
+
+Parte 1.
+
+Los valores teóricos de T1 y T2 se obtenien al utilizar las ecuaciones dadas en el pdf de la tarea y reemplazando en ellas
+los siguientes parametros usados en la simulación:
+m1=1			T=2*pi/omega
+m0=1047			omega=sqrt(G*(m0+m1)/r*r*r))			
+G=1
+r=1000
+
+Reemplazando los parametros anteriores en las respectivas ecuaciones se obtiene los siguientes resultados
+
+T1teorico = 76440 [unidad de tiempo]				T2teorico = 6157 [unidad de tiempo]
+
+Parte 2.
+
+Para obtener los valores "experimentales" de T1 y T2 se debe analizar la gráfica de la posicion en x con respecto al tiempo
+para el sistema troyano perturbado, esta gráfica representa una superposición de movimientos oscilantes y por tanto es posible obtener los
+dos periodos de ella.
+
+El primer periodo T1 se obtiene analizando la forma de la gráfica como un todo ya que a simple vista es posible observar la forma característica de una onda, con
+sus respectivos antinodos y nodos. Teniendo en cuenta lo acabado de mencionar, se hará un analisis de la distancia que existe entre nodos de tal manera que se complete
+un ciclo de la onda, posteriormente se toman los valores de t correspondientes a los nodos en cuestion y se calcula de manera aproximada el periodo.
+
+El primer nodo esta situado aproximadamente en el punto t = 76
+El segundo nodo esta situado aproximadamente en el punto t = 77455
+
+Con lo cual se tiene lo siguiente
+T1 = 77455 - 76 = 77382 [unidad de tiempo]
+
+Adicionalmente se realizó un segundo analisis midiendo la distancía entre cresta y cresta donde se obtuvieron los siguientes resultados.
+La primera cresta esta situada aproximadamente en el punto t = 18028
+La segunda cresta esta situada aproximadamente en el punto t = 92173
+
+Donde T1 = 92173 - 18028 = 74148 [unidad de tiempo]
+
+
+Es posible obtener el periodo T2 si se realiza un zoom a la gráfica, ya que de esta forma es posible observar con mayor detalle el comportamiento de la segunda onda 
+la cual "inmersa" o superpuesta a la primera onda analizada anteriormente. Posteriormente se hace un procedimiento analogo al realizado para calcular T1, sin embargo 
+en este caso se analizán unicamente la distancia entre crestas, ya que se pueden identificar con mayor facilidad.
+
+La primera cresta esta situada aproximadamente en el punto t = 36009
+La segunda cresta esta situada aproximadamente en el punto t = 42115
+
+Así se tiene que T2 = 6106 [unidad de tiempo]
+
+Parte 3.
+Finalmente se calculan los porcentajes de error para determinar la precisión de la simulación.
+
+Para T1 se tiene que:
+
+%E = |(T1teorico-T1)/T1teorico|*100 = |(76440-77382)/T1teorico|*100 = 1.2%
+
+De manera similar se realizaron los calculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
+
+Analogamente para T2 se tiene que:
+
+%E = |(T2teorico-T2)/T2teorico|*100 = |(6157-6106)/T1teorico|*100 = 0.82%
+
+Al igual que con T1 se realizaron calculos similares con distintos puntos y se obtuvieron porcentajes de error de hasta un 6%.
+
+De manera similar se realizaron los calculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
+
+De los resultados anteriores es posible concluir que la simulación tiene una precisión bastante elevada, con porcentajes de error que se encuentran dentro de los
+rangos aceptables.
+
+
+
+
+
+
+
+
