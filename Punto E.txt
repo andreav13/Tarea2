@@ -1,6 +1,6 @@
 Punto e)
 
-El punto se resolvera en tres partes: en primer lugar se calcularán los valores teóricos de los periodos T1 y T2 reemplazando los parámetros correspondientes, luego se procederá a realizar un cálculo aproximado de T1 y T2 analizando la gráfica obtenida de la simulación al perturbar ligeramente la posición inicial del planeta troyano, y finalmente se analizarán los porcentajes de error entre los valores teóricos y los "experimentales" determinando así la precisión de la simulación.
+El punto se resolverá en tres partes: en primer lugar se calcularán los valores teóricos de los periodos T1 y T2 reemplazando los parámetros correspondientes, luego se procederá a realizar un cálculo aproximado de T1 y T2 analizando la gráfica obtenida de la simulación al perturbar ligeramente la posición inicial del planeta troyano, y finalmente se analizarán los porcentajes de error entre los valores teóricos y los "experimentales" determinando así la precisión de la simulación.
 
 Parte 1.
 
@@ -10,7 +10,7 @@ m0=1047		omega=sqrt(G*(m0+m1)/r*r*r))
 G=1
 r=1000
 
-Reemplazando los parametros anteriores en las respectivas ecuaciones se obtienen los siguientes resultados
+Reemplazando los parámetros anteriores en las respectivas ecuaciones se obtienen los siguientes resultados:
 
 T1teorico = 76440 [unidad de tiempo]				T2teorico = 6157 [unidad de tiempo]
 
@@ -19,7 +19,7 @@ Parte 2.
 
 Para obtener los valores "experimentales" de T1 y T2 se debe analizar la gráfica de la posición en x con respecto al tiempo para el sistema troyano perturbado. Esta gráfica representa una superposición de movimientos oscilantes y por lo tanto es posible obtener los dos periodos a partir de ella.
 
-El primer periodo T1 se obtiene analizando la forma de la gráfica como un todo ya que a simple vista es posible observar la forma característica de una onda, con sus respectivos antinodos y nodos. Teniendo en cuenta lo acabado de mencionar, se hará un analisis de la distancia que existe entre dos nodos consecutivos de tal manera que se complete un ciclo de la onda. Posteriormente se toman los valores de t correspondientes a los nodos en cuestión y se calcula de manera aproximada el periodo.
+El primer periodo T1 se obtiene analizando la forma de la gráfica como un todo ya que a simple vista es posible observar la forma característica de una onda, con sus respectivos antinodos y nodos. Teniendo en cuenta lo acabado de mencionar, se hará un análisis de la distancia que existe entre dos nodos consecutivos de tal manera que se complete un ciclo de la onda. Posteriormente se toman los valores de t correspondientes a los nodos en cuestión y se calcula de manera aproximada el periodo.
 
 El primer nodo está situado aproximadamente en el punto t = 76
 El segundo nodo está situado aproximadamente en el punto t = 77455
