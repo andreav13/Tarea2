@@ -1,75 +1,65 @@
 Punto e)
 
-El punto se resolvera en tres partes, en primer lugar se calcular·n los valores teÛricos de los periodos T1 y T2
-reemplazando los parametros correspondientes, luego se procedera a realizar un calculo aproximado de T1 y T2 analizando
-la gr·fica obtenida de la simulaciÛn luego de perturbar ligeramente la posiciÛn inicial del planeta troyano, finalmente
-analizar·n los porcentajes de error entre los valores teÛricos y los "experimentales" determinando asÌ la precisiÛn de
-la simulaciÛn.
+El punto se resolvera en tres partes: en primer lugar se calcular√°n los valores te√≥ricos de los periodos T1 y T2 reemplazando los par√°metros correspondientes, luego se proceder√° a realizar un c√°lculo aproximado de T1 y T2 analizando la gr√°fica obtenida de la simulaci√≥n al perturbar ligeramente la posici√≥n inicial del planeta troyano, y finalmente se analizar√°n los porcentajes de error entre los valores te√≥ricos y los "experimentales" determinando as√≠ la precisi√≥n de la simulaci√≥n.
 
 Parte 1.
 
-Los valores teÛricos de T1 y T2 se obtenien al utilizar las ecuaciones dadas en el pdf de la tarea y reemplazando en ellas
-los siguientes parametros usados en la simulaciÛn:
+Los valores te√≥ricos de T1 y T2 se obtenien al utilizar las ecuaciones dadas en el pdf de la tarea y reemplazando en ellas los siguientes par√°metros usados en la simulaci√≥n:
 m1=1			T=2*pi/omega
-m0=1047			omega=sqrt(G*(m0+m1)/r*r*r))			
+m0=1047		omega=sqrt(G*(m0+m1)/r*r*r))			
 G=1
 r=1000
 
-Reemplazando los parametros anteriores en las respectivas ecuaciones se obtiene los siguientes resultados
+Reemplazando los parametros anteriores en las respectivas ecuaciones se obtienen los siguientes resultados
 
 T1teorico = 76440 [unidad de tiempo]				T2teorico = 6157 [unidad de tiempo]
 
+
 Parte 2.
 
-Para obtener los valores "experimentales" de T1 y T2 se debe analizar la gr·fica de la posicion en x con respecto al tiempo
-para el sistema troyano perturbado, esta gr·fica representa una superposiciÛn de movimientos oscilantes y por tanto es posible obtener los
-dos periodos de ella.
+Para obtener los valores "experimentales" de T1 y T2 se debe analizar la gr√°fica de la posici√≥n en x con respecto al tiempo para el sistema troyano perturbado. Esta gr√°fica representa una superposici√≥n de movimientos oscilantes y por lo tanto es posible obtener los dos periodos a partir de ella.
 
-El primer periodo T1 se obtiene analizando la forma de la gr·fica como un todo ya que a simple vista es posible observar la forma caracterÌstica de una onda, con
-sus respectivos antinodos y nodos. Teniendo en cuenta lo acabado de mencionar, se har· un analisis de la distancia que existe entre nodos de tal manera que se complete
-un ciclo de la onda, posteriormente se toman los valores de t correspondientes a los nodos en cuestion y se calcula de manera aproximada el periodo.
+El primer periodo T1 se obtiene analizando la forma de la gr√°fica como un todo ya que a simple vista es posible observar la forma caracter√≠stica de una onda, con sus respectivos antinodos y nodos. Teniendo en cuenta lo acabado de mencionar, se har√° un analisis de la distancia que existe entre dos nodos consecutivos de tal manera que se complete un ciclo de la onda. Posteriormente se toman los valores de t correspondientes a los nodos en cuesti√≥n y se calcula de manera aproximada el periodo.
 
-El primer nodo esta situado aproximadamente en el punto t = 76
-El segundo nodo esta situado aproximadamente en el punto t = 77455
+El primer nodo est√° situado aproximadamente en el punto t = 76
+El segundo nodo est√° situado aproximadamente en el punto t = 77455
 
-Con lo cual se tiene lo siguiente
+Con lo cual se tiene lo siguiente:
 T1 = 77455 - 76 = 77382 [unidad de tiempo]
 
-Adicionalmente se realizÛ un segundo analisis midiendo la distancÌa entre cresta y cresta donde se obtuvieron los siguientes resultados.
-La primera cresta esta situada aproximadamente en el punto t = 18028
-La segunda cresta esta situada aproximadamente en el punto t = 92173
+Adicionalmente se realiz√≥ un segundo an√°lisis midiendo la distancia entre cresta y cresta donde se obtuvieron los siguientes resultados:
+La primera cresta est√° situada aproximadamente en el punto t = 18028
+La segunda cresta est√° situada aproximadamente en el punto t = 92173
 
 Donde T1 = 92173 - 18028 = 74148 [unidad de tiempo]
 
 
-Es posible obtener el periodo T2 si se realiza un zoom a la gr·fica, ya que de esta forma es posible observar con mayor detalle el comportamiento de la segunda onda 
-la cual "inmersa" o superpuesta a la primera onda analizada anteriormente. Posteriormente se hace un procedimiento analogo al realizado para calcular T1, sin embargo 
-en este caso se analiz·n unicamente la distancia entre crestas, ya que se pueden identificar con mayor facilidad.
+Es posible obtener el periodo T2 si se realiza un zoom a la gr√°fica, ya que de esta forma es posible observar con mayor detalle el comportamiento de la segunda onda, que est√° "inmersa" o superpuesta a la onda analizada anteriormente. Posteriormente se hace un procedimiento an√°logo al realizado para calcular T1, sin embargo en este caso se analizan √∫nicamente la distancia entre crestas, ya que se pueden identificar con mayor facilidad.
 
-La primera cresta esta situada aproximadamente en el punto t = 36009
-La segunda cresta esta situada aproximadamente en el punto t = 42115
+La primera cresta est√° situada aproximadamente en el punto t = 36009
+La segunda cresta est√° situada aproximadamente en el punto t = 42115
 
-AsÌ se tiene que T2 = 6106 [unidad de tiempo]
+As√≠ se tiene que T2 = 6106 [unidad de tiempo]
+
 
 Parte 3.
-Finalmente se calculan los porcentajes de error para determinar la precisiÛn de la simulaciÛn.
+Finalmente se calculan los porcentajes de error para determinar la precisi√≥n de la simulaci√≥n.
 
 Para T1 se tiene que:
 
 %E = |(T1teorico-T1)/T1teorico|*100 = |(76440-77382)/T1teorico|*100 = 1.2%
 
-De manera similar se realizaron los calculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
+De manera similar se realizaron los c√°lculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
 
 Analogamente para T2 se tiene que:
 
 %E = |(T2teorico-T2)/T2teorico|*100 = |(6157-6106)/T1teorico|*100 = 0.82%
 
-Al igual que con T1 se realizaron calculos similares con distintos puntos y se obtuvieron porcentajes de error de hasta un 6%.
+Al igual que con T1 se realizaron c√°lculos similares con distintos puntos y se obtuvieron porcentajes de error de hasta un 6%.
 
-De manera similar se realizaron los calculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
+De manera similar se realizaron los c√°lculos para distintas medidas y los porcentajes de error se encuentran alrededor del 3%.
 
-De los resultados anteriores es posible concluir que la simulaciÛn tiene una precisiÛn bastante elevada, con porcentajes de error que se encuentran dentro de los
-rangos aceptables.
+De los resultados anteriores es posible concluir que la simulaci√≥n tiene una precisi√≥n bastante elevada, con porcentajes de error que se encuentran dentro de los rangos aceptables.
 
 
 
