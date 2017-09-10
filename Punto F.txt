@@ -11,8 +11,8 @@ m0 = 1047*m1		G = 6.67408(31)×10-11 [m^3*kg^-1*s^-2]
 
 Para obtener el valor de T1 y T2 correspondiente en años, basta con reemplazar estos parámetros en las ecuaciones propuestas en la literatura. De esta manera se obtienen los siguientes resultados:
 
-T1 =  4.6644  x 10^9 [s] = 4.6644 x 10^9 [s] x (1 [año]/31536000[s]) = 147.9056 [años]
-T2 = 375.7266 x 10^6 [s] = 375.7266 x 10^6 [s] x (1 [año]/31536000[s]) = 11.9142 [años]
+T1 =  4.6644  x 10^9 [s] = 4.6644 x 10^9 [s] x (1 [año]/31536000[s]) = 147.9 [años]
+T2 = 375.7266 x 10^6 [s] = 375.7266 x 10^6 [s] x (1 [año]/31536000[s]) = 11.91 [años]
 
 
 Parte 2.
@@ -29,7 +29,7 @@ La cantidad de segundos correspondientes a una unidad de tiempo se calcularán p
 	(newkg/1.898 × 10^27 [kg])=1
 	(7.784 x 10^8 [m]/newm)=1
 
-	De esta manera es posible multiplicar el lado derecho de la ecuación uno por la unidad cuantas veces sea necesario.
+	De esta manera es posible multiplicar el lado derecho de la ecuación (1) por la unidad cuantas veces sea necesario.
 	 
 	6.674 × 10^-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (1) * (1^3)
 	6.674 × 10^-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (newkg/1.898 × 10^27 [kg]) * (7.784 x 10^8 [m]/newm)^3
@@ -39,7 +39,7 @@ La cantidad de segundos correspondientes a una unidad de tiempo se calcularán p
 
 	news^2 = (1/6.674x10^-11)*(1/1.898x10^27)*((7.784x10^8)^3)
 	news = sqrt[ (7.784^3) x 10^8/(6.674*1.898) ] * [s]
-	news = 61.0187 x 10^3 [s]
+	news = 61.019 x 10^3 [s]
 
 Así pues, una unidad de tiempo corresponde a 6.102 x 10^4 segundos.
 
@@ -48,11 +48,11 @@ Para comprobar el valor de una unidad de tiempo se recalcularán los valores de 
 
 	T1 = 76440[news] x 6.102 x 10^4[s]/1[news]
 	T1 = 4.6643 x 10^9 [s] x (1 [año]/31536000[s]) 
-	T1 = 147.903 años
+	T1 = 147.9 años
 
 	T2 = 6157[news] x 6.102 x 10^4[s]/1[news] 
 	T2 = 375.6922 x 10^6 [s] x (1 [año]/31536000[s]) 
-	T2 = 11.9131 años
+	T2 = 11.91 años
 	
 Y de la misma manera para los periodos de la simulación medidos en el punto e):
 
