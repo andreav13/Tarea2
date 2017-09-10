@@ -1,7 +1,7 @@
 Punto f)
 
-El siguiente punto se resolvera en dos partes, en primer lugar se re calcularan los valores de T1 y T2 teóricos de tal manera que las unidades resultantes sean años,
-para esto se re definiarn los parametros utilizados en la simulación de manera tal que se usen sus valores reales, en este orden de ideas los nuevos valores son los
+El siguiente punto se resolverá en dos partes, en primer lugar se re calcularan los valores de T1 y T2 teóricos de tal manera que las unidades resultantes sean años,
+para esto se re definirán los parámetros utilizados en la simulación de manera tal que se usen sus valores reales, en este orden de ideas los nuevos valores son los
 siguientes:
 
 m1 = 1.898×10^27 [kg]	r = 778’412,026 [km]
@@ -9,39 +9,50 @@ m0 = 1047*m1		G = 6.67408(31)×10-11 [m^3*kg^-1*s^-2]
 
 Parte 1.
 
-Para obtener el valor de T1 y T2 correspondiente en años, basta con reemplazar los parametros redefinidos anteriormente en las ecuaciones propuestas en la literatura,
+Para obtener el valor de T1 y T2 correspondiente en años, basta con reemplazar los parámetros redefinidos anteriormente en las ecuaciones propuestas en la literatura,
 de esta manera se obtienen los siguientes resultados:
 
-T1 = 147499714.2 [s] = 1.474997142 x 10 ^8 [s] x (1 [año]/31536000[s]) = 4.6772 [años]
-T2 = 11881518.04 [s] = 1.188151804 x 10 ^7 [s] x (1 [año]/31536000[s]) = 0.3768 [años]
+T1 =  4.6644  x 10^9 [s] = 4.6644 x 10^9 [s] x (1 [año]/31536000[s]) = 147.9056 [años]
+T2 = 375.7266 x 10^6 [s] = 375.7266 x 10^6 [s] x (1 [año]/31536000[s]) = 11.9142 [años]
 
 Parte 2.
 
-La cantidad de segundos correspondientes a una unidad de tiempo se calcularan por medio de un procedimiento explicado en clase el cual consiste en la creación de parametros
-a partir de los valores propuestos anteriormente los cuales nos permitiran despejar de la constante G el equivalente a una unidad de tiempo en segundos. Esto se realiza
+La cantidad de segundos correspondientes a una unidad de tiempo se calcularan por medio de un procedimiento explicado en clase el cual consiste en la creación de parámetros
+a partir de los valores propuestos anteriormente los cuales nos permitirán despejar de la constante G el equivalente a una unidad de tiempo en segundos. Esto se realiza
 de la siguiente manera:
 
-1. Creación de parametros:
+1. Creación de parámetros:
 	newkg = 1.898×10^27 [kg]
-	newm = (778’412,026[km] )/1000 = (778’412,026 x 10^3 [m])/1000 = 778’412,026 [m] = 7.784 x 10 ^6 [m]
+	newm = (778'412,026[km] )/1000 = (778'412,026 x 10^3 [m])/1000 = 778'412,026 [m] = 7.784 x 10^8 [m]
 	
-	G = 6.67408(31)×10-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)]  (1)
+	G = 6.67408×10^-11 [m^3/(kg*s^2)] = 1 [newm^3/(newkg*news^2)]  (1)
 	
 	Ahora se procede a realizar el siguiente despeje.
-	(newkg/1.898×10^27 [kg])=1
-	(7.784 x 10 ^6 [m]/newm)=1
+	(newkg/1.898 × 10^27 [kg])=1
+	(7.784 x 10^8 [m]/newm)=1
 
 	De esta manera es posible multiplicar el lado derecho de la ecuación uno por la unidad cuantas veces sea necesario.
 	 
-	6.674×10-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (1) * (1^3)
-	6.674×10-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (newkg/1.898×10^27 [kg]) * (7.784 x 10 ^6 [m]/newm)^3
-	6.674×10-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (newkg/1.898×10^27 [kg]) * ((7.784^3) x 10 ^18 [m^3]/newm^3)
+	6.674 × 10^-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (1) * (1^3)
+	6.674 × 10^-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (newkg/1.898 × 10^27 [kg]) * (7.784 x 10^8 [m]/newm)^3
+	6.674 × 10^-11 [m^3/(kg*s^2)] = [newm^3/(newkg*news^2)] * (newkg/1.898 × 10^27 [kg]) * ((7.784^3) x 10^24 [m^3]/newm^3)
 
-	Cancelando Terminos semejantes y despejando news en terminos de s se tiene que
+	Cancelando términos semejantes y despejando news en términos de s se tiene que
 
-	news^2 = ((7.784^3) x 10 ^18 * 6.674×10 ^11 * s^2)/1.898×10^27
-	news = sqrt[ ((7.784^3)*6.674)x10^2) / 1.898 ] * [s]
-	news = 407.2 [s]
+	news^2 = (1/6.674x10^-11)*(1/1.898x10^27)*((7.784x10^8)^3)
+	news = sqrt[ (7.784^3) x 10^8/(6.674*1.898) ] * [s]
+	news = 61.0187 x 10^3 [s]
+
+
+Para comprobar el valor de news se recalcularán los valores de T1 y T2 utilizando los valores teóricos y multiplicándolos por news.
+
+	T1 = 76440*news
+	T1 = 4.6643 x 10^9 [s] x (1 [año]/31536000[s]) 
+	T1 = 147.903 [años]
+
+	T2 = 6157*news 
+	T2 = 375.6922 x 10^6 [s] x (1 [año]/31536000[s]) 
+	T2 = 11.9131 [años]
 
 
 
